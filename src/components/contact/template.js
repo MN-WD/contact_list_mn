@@ -4,7 +4,7 @@ export default function getTemplate (contact) {
   return `
     <tr class="contact-row isEditing-hidden">
       <td class="p-4">
-        <span class="isEditing-hidden">${contact.firstname}</span>
+        <span class="isEditing-hidden firstname">${contact.firstname}</span>
         <input
           type="text"
           value="${contact.firstname}"
@@ -12,7 +12,7 @@ export default function getTemplate (contact) {
         />
       </td>
       <td class="p-4">
-        <span class="isEditing-hidden">${contact.lastname}</span>
+        <span class="isEditing-hidden lastname">${contact.lastname}</span>
         <input
           type="text"
           value="${contact.lastname}"
@@ -20,7 +20,7 @@ export default function getTemplate (contact) {
         />
       </td>
       <td class="p-4">
-        <span class="isEditing-hidden">${contact.email}</span>
+        <span class="isEditing-hidden email">${contact.email}</span>
         <input
           type="text"
           value="${contact.email}"

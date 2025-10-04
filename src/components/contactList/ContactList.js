@@ -9,16 +9,23 @@ export default class ContactList {
     this.contacts = [];
     this.loadContacts();
   }
+
   async loadContacts () {
     const contacts = await DB.findAll();
     this.contacts = contacts.map((contact) => new Contact(contact));
     // console.table(contacts);
     this.render();
   }
+
+  renderContactCount () {
+    this.domElt.querySelector(".contact-count").innerText = this.contacts.length;
+  }
+
   render () {
     this.domElt.innerHTML = getTemplate();
     this.contacts.forEach((contact) => 
       contact.render(this.domElt.querySelector(".contact-body"))
     );
+    this.renderContactCount();
   }
 }
