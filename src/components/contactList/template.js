@@ -9,7 +9,7 @@ export default function getTemplate (contactList) {
         <label class="block text-gray-700">Firstname</label>
         <input
           type="text"
-          class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          class="formFirstname mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           placeholder="Alex"
         />
       </div>
@@ -17,7 +17,7 @@ export default function getTemplate (contactList) {
         <label class="block text-gray-700">Lastname</label>
         <input
           type="text"
-          class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          class="formLastname mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           placeholder="Doe"
         />
       </div>
@@ -25,17 +25,19 @@ export default function getTemplate (contactList) {
         <label class="block text-gray-700">Email</label>
         <input
           type="email"
-          class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          class="formEmail mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           placeholder="alex.doe@gmail.com"
         />
       </div>
       <button
-        class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
+        class="new-contact w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
       >
         Add
       </button>
     </aside>
+    <!-- Fin aside formulaire -->
 
+    <!-- Body droite + contact list -->
     <section class="w-2/3 p-6">
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-xl font-bold mb-4">Contacts List</h2>
@@ -72,6 +74,7 @@ export default function getTemplate (contactList) {
         </tbody>
       </table>
     </section>
+    <!-- Fin body droite -->
 
     <footer class="w-full bg-gray-500 text-white text-xs p-2">
       &copy; EAFC 2025 Contacts App. All rights reserved.
