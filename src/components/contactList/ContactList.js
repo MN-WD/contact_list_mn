@@ -12,11 +12,13 @@ export default class ContactList {
   async loadContacts () {
     const contacts = await DB.findAll();
     this.contacts = contacts.map((contact) => new Contact(contact));
-    console.table(contacts);
+    // console.table(contacts);
     this.render();
   }
   render () {
     this.domElt.innerHTML = getTemplate();
-    this.contacts.forEach(contact => contact.render(this.domElt.querySelector(".contact-list")));
+    this.contacts.forEach((contact) => 
+      contact.render(this.domElt.querySelector(".contact-body"))
+    );
   }
 }
