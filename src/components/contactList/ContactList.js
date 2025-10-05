@@ -4,11 +4,11 @@ import getTemplate from './template';
 
 export default class ContactList {
   constructor (data) {
-    // #app dans this.domElt
+    // Assignation de #app dans domElt
     this.domElt = document.querySelector(data.elt);
     // Initialisation de listDomElt utilisé dans le render
     this.listDomElt = null;
-    // Assignation de l'url de notre API
+    // Set l'url de l'API
     DB.setApiURL(data.apiURL);
     // Initialisation du tableau des contacts
     this.contacts = [];
@@ -31,6 +31,7 @@ export default class ContactList {
   }
 
   render () {
+    // Récupération du template de la Contact List
     this.domElt.innerHTML = getTemplate();
     // Propriété raccourcie pour sélectionner la liste de contact
     this.listDomElt = this.domElt.querySelector(".contact-body");
